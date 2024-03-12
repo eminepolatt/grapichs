@@ -1,0 +1,33 @@
+
+package GRAPHICS;
+
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+class panelim extends JPanel{
+    @Override
+    public void paint(Graphics g){
+        g.drawRect(30,120,60,60);//ön kare
+        g.drawRect(70,90,60,60);//arka kare
+        g.drawLine(30,120,70,90);
+        g.drawLine(90,120,130,90);
+        g.drawLine(30,180,70,150);
+        g.drawLine(90,180,130,150);
+    }
+}
+public class  küpciz extends  JFrame {
+    public  küpciz(){
+        add(new panelim());
+    }
+    public static void main(String[] args) {
+         küpciz f=new  küpciz();
+        f.setSize(300, 300);
+        f.setLocation(600, 300);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+    }
+}
+
+
+    
+
