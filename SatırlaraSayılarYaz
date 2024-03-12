@@ -1,0 +1,30 @@
+
+package GRAPHICS;
+
+import java.awt.Graphics;
+import javax.swing.*;
+
+class panel extends JPanel{
+    @Override
+    public void paint (Graphics g){
+        for (int y = 10; y < 200;y=y+15) {
+            int i=1;
+            for (int x = 10; x < y; x=x+15) {
+                g.drawString(i+" ",x,y);
+                i=i+1;
+            }
+        }
+} }
+public class SatırlaraSayılarYaz extends JFrame {
+    public SatırlaraSayılarYaz (){
+        add(new panel());
+    }
+   
+public static void main(String[] args) {
+        SatırlaraSayılarYaz form=new SatırlaraSayılarYaz();
+        form.setSize(400, 400);
+        form.setLocation(500,300);
+        form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        form.setVisible(true);
+}
+} 
