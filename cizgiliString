@@ -1,0 +1,29 @@
+package GRAPHICS;
+
+
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+class panel extends JPanel{
+    @Override
+    public void paint(Graphics g){
+       g.drawLine(30,30 ,150,30 );
+       g.drawString("HELLOOO",30,50);
+       g.drawLine(30,70,150,70);
+        
+    }
+    }
+
+public class çizgilistring extends JFrame{
+    public çizgilistring(){
+        add (new panel());
+    }
+    public static void main(String[] args) {
+        çizgilistring f=new çizgilistring();
+        f.setSize(300,300);
+        f.setLocation(500, 600);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+        
+    }
+}
