@@ -1,0 +1,36 @@
+
+package GRAPHICS;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+class panelim extends JPanel{
+     @Override
+     public void paint (Graphics g){
+         g.setColor(Color.gray);
+         g.drawString("HELLO MY FRİENDS", 20, 50);//g.drawstring string yazar
+          g.drawString("YARENKOM"+" " 
+                  + "HATÇİKOM"+" "
+                  + "ZEYNOKOM", 20,130);
+         g.drawString("I LOVE U BABES",150, 200);
+         g.setColor(Color.red);//hangi işlemden önce yazarsan o işlemin rengini belirler
+         g.drawLine(30, 30, 50,100);//(x1,y1,x2,y2) Girilen kordinatlarda çizgi çizer
+        
+    }
+}
+//JFrame daha kapsamlı bir class old için ordan add ile her türlü işimizi kullanabilirz
+
+public class grafikuyg1 extends JFrame {
+   public grafikuyg1(){
+       add(new panelim());
+   }
+    public static void main(String[] args) {
+        grafikuyg1 form=new grafikuyg1();
+        form.setSize(300, 300);//grafiğin boyutunu gösterir
+        form.setLocation(600,300);//grafiğin konumunu gösterir
+        form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//grafikteki X işaretine basınca grafiği kapatır
+        form.setVisible(true);//false yaparsan çalışır ama grafiği göstermez
+    }
+
+}
