@@ -1,0 +1,31 @@
+
+package GRAPHICS;
+
+
+//en basit applet örneği
+
+import java.awt.Graphics;;
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+
+class applet extends JPanel {
+    @Override
+    public void paint( Graphics g ) {
+        g.drawString( "Hello World!", 30, 30 );
+    }
+}
+public class basitApplet extends JFrame {
+   
+    public basitApplet ()  {
+        add(new applet()); 
+        
+  }
+    public static void main(String[] args) {
+    basitApplet a=new basitApplet();
+        a.setSize(300, 300);
+        a.setLocation(500, 300);
+        a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        a.setVisible(true);
+    }
+}
+  
