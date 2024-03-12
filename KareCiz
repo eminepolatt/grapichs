@@ -1,0 +1,31 @@
+
+package GRAPHICS;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+class panelim extends JPanel{
+    public void paint(Graphics g){
+        g.setColor(Color.red);
+        g.drawLine(80,80,160,80);
+        g.setColor(Color.orange);
+        g.drawLine(80,80,80,120);
+        g.setColor(Color.blue);
+        g.drawLine(80,120,160,120);
+        g.setColor(Color.pink);
+        g.drawLine(160,80,160,120);
+    }
+}
+public class kareCiz extends  JFrame {
+    public kareCiz(){
+        add(new panelim());
+    }
+    public static void main(String[] args) {
+        kareCiz f=new kareCiz();
+        f.setSize(300, 300);
+        f.setLocation(600, 300);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+    }
+}
