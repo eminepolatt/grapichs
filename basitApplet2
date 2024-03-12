@@ -1,0 +1,32 @@
+
+package GRAPHICS;
+import java.applet.*;
+import java.awt.*; // awt küyüphanesinde Applet sınıfı bulunur /swing kütüphanesinden de JApplet classı bulunur
+
+public class basitApplet2 extends Applet { //Applet sınıfından kalıtım alır
+    int x,y;
+    public void init(){ // init() metodu değişkenlerin başlangıç değerini atamak,
+                        //grafiği yüklemek,nesneleri oluşturmak için kullanılır 
+        x=60;
+        y=100;
+        
+    }
+    public void paint (Graphics g){ //paint metodu ekran üzerinde satır ,metin veya
+                                    //resim gösterir türü graphics olan bir argüman alır
+        g.drawString("Fırat BMU", x,y);
+        showStatus(getAppletInfo());//applet üzerinde herhangi biir bilgi döndürmek için 
+                                    //kullanıcı applet sınıfının getAppletInfo metodunun 
+                                    //üzerine yazılabilir
+    }
+    public String getAppletInfo(){
+        String info="Eğitimin doğru adresi";
+        return info;
+    }
+    }
+// applet uygulamaları main metoduna gerek duymaz
+/*<html>
+<applet code="applet1.class" width=500 height=400></applet>
+</html>*/
+//ile tazdığımız dosyasını derleyin,derlediğiniz dosyaya ait .class 
+//dosyasını bir HTML dosyasına gömmeniz gerekir.
+//Bunun için bir HTML dosyasını oluşturun.
