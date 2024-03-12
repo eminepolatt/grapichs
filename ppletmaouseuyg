@@ -1,0 +1,38 @@
+
+package GRAPHICS;
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+
+ public class appletmaouseuyg extends Applet implements MouseListener {
+ static int i;
+ @Override
+ public void mouseExited (MouseEvent e) {}
+ @Override
+ public void mousePressed (MouseEvent me) {} 
+public void mouseRelesead (MouseEvent me) {} 
+ @Override
+ public void mouseEntered (MouseEvent me) {} 
+ @Override
+ public void mouseClicked (MouseEvent me) {}
+    @Override
+ public void mouseReleased (MouseEvent me){repaint (); }
+ @Override
+ public void init () {i=0; addMouseListener (this);}
+ @Override
+   public void paint (Graphics g) {
+   if (i>50) {this.destroy();}
+    else {g.drawString (String.valueOf(i),20,15); }
+i++;}
+ @Override
+ public void start () {
+Frame f=new Frame ("pencere");
+f.setSize (400, 400);
+f.setVisible (true);
+}
+ @Override
+ public void stop() {
+Frame f=new Frame ("pencere 2"); 
+f.setSize(400,400);
+f.setVisible(true);
+        }}
