@@ -1,0 +1,25 @@
+
+package GRAPHICS;
+ 
+import java.awt.Graphics;
+import javax.swing.*;
+
+class panel extends JPanel{
+    @Override
+    public void paint (Graphics g){
+        g.drawRect(50,50,150,120);//kordinatları girilen dikdörtgeni çizer
+} }
+public class hazırDikdörtgen extends JFrame {
+    public hazırDikdörtgen (){
+        add(new panel());
+    }
+   
+public static void main(String[] args) {
+        hazırDikdörtgen form=new hazırDikdörtgen();
+        form.setSize(400, 400);
+        form.setLocation(500,300);
+        form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        form.setVisible(true);
+}
+}
+
